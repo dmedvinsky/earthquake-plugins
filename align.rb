@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # align plugin
 #
 # For now only aligns usernames.
@@ -6,13 +7,13 @@
 #
 # Earthquake.config[:plugin_align] = {
 #     :name_maxlen => 10,
-#     :more_char => '+'
+#     :more_char => '…'
 # }
 
 Earthquake.init do
     cfg = config[:plugin_align] ||= {}
     cfg[:name_maxlen] ||= 12
-    cfg[:more_char] ||= '+'
+    cfg[:more_char] ||= '…'
 
     maxlen = cfg[:name_maxlen]
     output_filter do |item|
